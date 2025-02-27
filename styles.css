@@ -183,7 +183,7 @@ header {
 .about {
     display: flex;
     flex-direction: column;
-    border: 1px solid red;
+    /* border: 1px solid red; */
 
     gap: 2rem;
 }
@@ -191,7 +191,29 @@ header {
 /* Skills section */
 
 .stacks {
-    border: 1px  solid blue;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.SH {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    /* border: 1px  solid blue; */
+    padding: 10px;
+}
+
+.divCont {
+    width: 150px;
+    height: auto;
+    /* border: 1px  solid rgb(0, 255, 34); */
+    padding: 10px;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
 }
 
 .icon {
