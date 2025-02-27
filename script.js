@@ -1,4 +1,4 @@
-
+// Navbar toggle for small screens
 const xMenu = document.querySelector('.X-menu');
 const vertMenu = document.querySelector('.vertical-menu');
 const menuCont = document.querySelector('.menu-container');
@@ -20,7 +20,7 @@ const closeNav = () => {
 
 // Automatically close menu when screen is resized
 window.addEventListener('resize', () => {
-    if (window.innerWidth >= 768) { // Adjust breakpoint if necessary
+    if (window.innerWidth >= 768) {
         vertMenu.style.display = 'none';
     }
 });
@@ -28,55 +28,43 @@ window.addEventListener('resize', () => {
 // Event listeners
 menuCont.addEventListener('click', openNav);
 xMenu.addEventListener('click', closeNav);
-/*
-const navToggle = () => {
-    menuCont = isMenuCont;
-    isMenuCont = false;
-    if (!isMenuCont == true) {
-        xMenu.style.display = 'flex';
-    } else {
-        xMenu.style.display = 'none';
-    }
-}
-*/
 
+// Skills Display
+const skill = document.querySelector('.skills');
+const f_end = document.querySelector('.frontend');
+const b_end = document.querySelector('.backend');
+const ops_ = document.querySelector('.ops');
 
-
-const skills = [
-    {
-        name: 'HTML',
-        file: ''
-    },
-    {
-        name: 'CSS',
-        file: ''
-    },
-    {
-        name: 'JavaScript',
-        file: ''
-    },
-    {
-        name: 'React',
-        file: ''
-    },
-    {
-        name: 'Tailwind',
-        file: ''
-    },
-    {
-        name: 'Node.js',
-        file: ''
-    },
-    {
-        name: 'Express.js',
-        file: ''
-    },
-    {
-        name: 'Python',
-        file: ''
-    },
-    {
-        name: '',
-        file: ''
-    },
+const frontEnd = [
+    { name: 'HTML', filepath: './images/icons/HTML-icon.png' },
+    { name: 'CSS', filepath: './images/icons/CSS-icon.png' },
+    { name: 'JavaScript', filepath: './images/icons/JS-icon.png' },
+    { name: 'React', filepath: './images/icons/react-icon.png' },
+    { name: 'Tailwind', filepath: './images/icons/tailwind-icon(1).png' }
 ];
+
+
+frontEnd.map((val) => {
+    let icon = document.createElement('img')
+    icon.setAttribute('src', val.filepath);
+    icon.setAttribute('class', 'icon');
+    let p = document.createElement('p');
+    p.textContent = val.name;
+    f_end.appendChild(icon);
+    f_end.appendChild(p);
+    console.log(p);
+})
+
+const backEnd = [
+    {name: 'Node.js', filepath: './images/icons/'},
+    {name: 'Express.js', filepath: './images/icons/'},
+    {name: 'Python', filepath: './images/icons/'},
+];
+
+
+const ops = [
+    {name: 'Git', filepath: './images/icons/'},
+    {name: 'Vercel', filepath: './images/icons/'}
+];
+
+

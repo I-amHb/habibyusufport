@@ -190,6 +190,14 @@ header {
 
 /* Skills section */
 
+.stacks {
+    border: 1px  solid blue;
+}
+
+.icon {
+ width: 40px;
+}
+
 /* Project section */
 
 /* Contact section */
