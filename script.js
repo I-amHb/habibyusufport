@@ -1,24 +1,31 @@
 
-// Navbar toggle
-
 const xMenu = document.querySelector('.X-menu');
 const vertMenu = document.querySelector('.vertical-menu');
 const menuCont = document.querySelector('.menu-container');
 
-// Opens vertical nav bar when menuCont is clicked
+// Ensure the menu is closed when the page loads
+document.addEventListener('DOMContentLoaded', () => {
+    vertMenu.style.display = 'none';
+});
+
+// Opens vertical navbar when menuCont is clicked
 const openNav = () => {
     vertMenu.style.display = 'flex';
-}
+};
+
 // Closes vertical navbar when xMenu is clicked
 const closeNav = () => {
     vertMenu.style.display = 'none';
-}
+};
+
+// Automatically close menu when screen is resized
 window.addEventListener('resize', () => {
     if (window.innerWidth >= 768) { // Adjust breakpoint if necessary
         vertMenu.style.display = 'none';
     }
 });
 
+// Event listeners
 menuCont.addEventListener('click', openNav);
 xMenu.addEventListener('click', closeNav);
 /*
