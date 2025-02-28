@@ -15,11 +15,11 @@
             <h1 class="logo">HB</h1>
             <div class="nav-div">
                 <ul class="nav-list">
-                    <li>Home</li>
-                    <li>About</li>
-                    <li>Skill</li>
-                    <li>Projects</li>
-                    <li>Contacts</li>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#blank">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
                 <div class="menu-container">
                     <div class="menu"></div>
@@ -36,16 +36,16 @@
                 <div class="x-line X-2"></div>
             </div>
             <ul class="vert-nav-list">
-                <li>Home</li>
-                <li>About</li>
-                <li>Skill</li>
-                <li>Projects</li>
-                <li>Contacts</li>
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#blank">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
     </header>
     <div class="contianer">
-        <section class="hero sec">
+        <section class="hero sec" id="hero">
             <div class="hero-div1">
                 <p class="hero-p">Hello, my name is </p>
                 <h1 class="hero-h1">Habib</h1>
@@ -58,31 +58,34 @@
                 </p>
             </div>
             <div class="button-div">
-                <a class="heroCTA">Get in Touch</a>
+                <a class="heroCTA" href="#contact">Get in Touch</a>
             </div>
-            
+
         </section>
-        <section class="about sec">
+        <section class="about sec" id="about">
             <h2 class="about-title">About</h2>
             <p class="about-p">
-                Hey, i am Habib Yusuf, and i'm a frontend web developer and aspiring fullstack developer specialized in React.js,
-                node.js, and express.js. i am very passionate about building quality web application, 
-                prioritising smooth and seamless user-experience. i am determined to learn new technologies, as  well advancing on currents ones. <br> <br>
-                looking forward to refining my skills in challemging work environment. I guarantee commitment and diligence in fulfilling my tasks.
-                
+                Hey, i am Habib Yusuf, and i'm a frontend web developer and aspiring fullstack developer specialized in
+                React.js,
+                node.js, and express.js. i am very passionate about building quality web application,
+                prioritising smooth and seamless user-experience. i am determined to learn new technologies, as well
+                advancing on currents ones. <br> <br>
+                looking forward to refining my skills in challemging work environment. I guarantee commitment and
+                diligence in fulfilling my tasks.
+
 
             </p>
         </section>
-        <section class="skills sec">
+        <section class="skills sec" id="skills">
             <h2 class="skills-title">Skills</h2>
             <div class="skills">
                 <div class="frontend stacks">
-                    <h3>Frontend</h3>  
+                    <h3>Frontend</h3>
                     <div class="stackHouse SH"></div>
                 </div>
                 <div class="backend stacks">
                     <h3>Backend</h3>
-                    <div class="stackHouse1 SH"></div>  
+                    <div class="stackHouse1 SH"></div>
                 </div>
                 <div class="ops stacks">
                     <h3>Ops</h3>
@@ -90,15 +93,16 @@
                 </div>
             </div>
         </section>
-        <section class="projects sec" style="display: none;">
+        <section class="projects sec" id="projects" style="display: none;">
             <h2 class="projects-title">Project(s)</h2>
         </section>
-        <section class="contacts sec">
+        <section class="contacts sec" id="contact">
             <h2 class="contacts-title">Contacts</h2>
             <form id="contactForm">
                 <div class="nameDiv"><input class="inputbox name" type="text" placeholder="Name" name="name"></div>
                 <div class="emailDiv"><input class="inputbox email" type="email" placeholder="Email" name="nmail"></div>
-                <div class="msgDiv"><textarea class="inputbox message" name="message" id="" placeholder="Message"></textarea></div>
+                <div class="msgDiv"><textarea class="inputbox message" name="message" id=""
+                        placeholder="Message"></textarea></div>
                 <button class="btn">Send</button>
             </form>
         </section>
