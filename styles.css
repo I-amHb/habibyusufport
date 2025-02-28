@@ -223,7 +223,8 @@ header {
 }
 
 .divCont {
-    width: 130px;
+    min-width: 120px;
+    max-width: 150px;
     height: auto;
     /* border: 1px  solid rgb(0, 255, 34); */
     padding: 10px;
@@ -233,7 +234,8 @@ header {
 }
 
 .icon {
- width: 34px;
+ min-width: 24px;
+ max-width: 50px;
 }
 
 /* Project section */
