@@ -2,12 +2,15 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    /* border: 1px solid red; */
+    border: 1px solid red;
 }
 
 body {
+    background-color: rgb(9, 27, 48);
+    color: aliceblue;
     display: flex;
     flex-direction: column;
+    font-family: Roboto;
 }
 
 p {
@@ -16,18 +19,19 @@ p {
 
 a {
     text-decoration: none;
-    color: inherit ;
+    color: inherit;
 }
 
 /* Header/Navbar */
 
 header {
     position: relative;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid white;
     min-height: 100px;
     display: flex;
     align-items: center;
     margin-bottom: 20px;
+    
 }
 
 .navbar {
@@ -50,12 +54,26 @@ header {
 
 .nav-list {
     display: none;
-    justify-content: space-evenly;
     list-style-type: none;
+    height: 40px;
 
     li {
-        margin: 0 20px;
+        display: flex;
+        height: 100%;
+        align-items: center;
+
+        a {
+
+            border: none;
+            text-align: center;
+            padding: 5px;
+        }
     }
+
+    li:hover {
+        border-bottom: 2px solid #1F85DE;
+    }
+
 
 }
 
@@ -70,7 +88,7 @@ header {
 
 .menu {
     align-self: center;
-    background-color: black;
+    background-color: white;
     width: 25px;
     height: 4px;
 }
@@ -78,11 +96,11 @@ header {
 /* Vertical menu */
 
 .vertical-menu {
-    background-color: cornflowerblue;
+    background-color: #000;
     display: flex;
     flex-direction: column;
-    width: 40%;
-    height: 100vh;
+    width: 60%;
+    height: 75vh;
     position: absolute;
     top: 0;
     right: 0;
@@ -101,7 +119,7 @@ header {
 
 
         .x-line {
-            background-color: black;
+            background-color: white;
             width: 25px;
             height: 4px;
         }
@@ -137,16 +155,25 @@ header {
 .container {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 30px;
 }
 
 .sec {
     width: 100%;
-    min-height: 60vh;
+    min-height: 500px;
     /* border: 1px solid red; */
     padding: 20px 15px;
     margin: 30px 0;
 }
+
+.intro,
+.about-title,
+.skills-title,
+.projects-title,
+.contacts-title {
+    color: #1F85DE;
+}
+
 /* Hero section */
 .hero {
     height: 80vh;
@@ -165,7 +192,7 @@ header {
 }
 
 .hero-h2 {
-    font-size: 30px;
+    font-size: 40px;
 }
 
 .hero-p {
@@ -175,7 +202,8 @@ header {
 
 .heroCTA {
     display: inline-block;
-    border: 1px solid blue;
+    border: 1px solid #1F85DE;
+    color: #1F85DE;
     width: 150px;
     height: 60px;
     border-radius: .5rem;
@@ -199,6 +227,8 @@ header {
     max-width: 552px;
 }
 
+
+
 /* Skills section */
 
 .skills {
@@ -209,7 +239,7 @@ header {
 }
 
 .stacks {
-    
+
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -222,7 +252,7 @@ header {
     justify-content: flex-start;
     margin: 0 auto;
     gap: 1rem;
-    
+
     /* border: 1px  solid blue; */
     padding: 10px;
 }
@@ -239,8 +269,8 @@ header {
 }
 
 .icon {
- min-width: 24px;
- max-width: 50px;
+    min-width: 24px;
+    max-width: 50px;
 }
 
 /* Project section */
@@ -266,7 +296,7 @@ header {
     margin: 0 auto;
     gap: 1.5rem;
     padding: 20px 0;
-   
+
 }
 
 .nameDiv,
@@ -288,7 +318,7 @@ header {
 .email {
     min-height: 45px;
 
-    }
+}
 
 .message {
     padding-top: 10px;
@@ -298,8 +328,10 @@ header {
 }
 
 .btn {
+    background-color: inherit;
     align-self: center;
-    border: 1px solid blue;
+    border: 1px solid #1F85DE;
+    color: #1F85DE;
     width: 150px;
     height: 60px;
     border-radius: .5rem;
@@ -311,8 +343,21 @@ header {
 
 /*  Screen Sizes */
 @media (min-width: 768px) {
+
+    header {
+        padding: 0 20px;
+    }
+
+    .sec {
+        padding :40px;
+    }
+
     .nav-list {
         display: flex;
+
+        li {
+            margin: 0 20px;
+        }
     }
 
 
@@ -330,7 +375,8 @@ header {
 
     .about-title,
     .about-p {
-        min-width: 700px;
+
+        min-width: 500px;
     }
 }
 
@@ -338,6 +384,11 @@ header {
 @media (min-width: 1024px) {
     .sec {
         padding: 0 60px;
+    }
+
+    .about {
+        
+        min-width: 700px;
     }
 
 }

@@ -69,8 +69,8 @@ frontEnd.map((val) => {
 
 const backEnd = [
     {name: 'Node.js', filepath: './images/icons/node-js-icon.png'},
-    {name: 'Express.js', filepath: './images/icons/express-icon480.png'},
-    // {name: 'Python', filepath: './images/icons/python-icon.png'},
+    {name: 'Express.js', filepath: './images/icons/express-js.png'},
+    {name: 'Python', filepath: './images/icons/python-icon.png'},
 ];
 
 
