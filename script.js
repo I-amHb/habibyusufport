@@ -1,33 +1,46 @@
-// Navbar toggle for small screens
-const xMenu = document.querySelector('.X-menu');
-const vertMenu = document.querySelector('.vertical-menu');
-const menuCont = document.querySelector('.menu-container');
 
-// Ensure the menu is closed when the page loads
-document.addEventListener('DOMContentLoaded', () => {
-    vertMenu.style.display = 'none';
+const showSideBar = () => {
+    const sideBar = document.querySelector('.sidebar');
+    sideBar.style.display = 'flex';
+  };
+  
+  const hideSideBar = () => {
+      const sideBar = document.querySelector('.sidebar');
+      sideBar.style.display = 'none';
+  }
+const sideBarLinks = document.querySelectorAll('.sidebar-links');
+
+sideBarLinks.forEach(links => {
+    links.addEventListener('click', () => {
+        const sideBar = document.querySelector('.sidebar');
+        sideBar.style.display = 'none';
+    });
 });
 
-// Opens vertical navbar when menuCont is clicked
-const openNav = () => {
-    vertMenu.style.display = 'flex';
-};
-
-// Closes vertical navbar when xMenu is clicked
-const closeNav = () => {
-    vertMenu.style.display = 'none';
-};
-
-// Automatically close menu when screen is resized
 window.addEventListener('resize', () => {
     if (window.innerWidth >= 768) {
-        vertMenu.style.display = 'none';
+        const sideBar = document.querySelector('.sidebar');
+        sideBar.style.display = 'none';
     }
 });
 
-// Event listeners
-menuCont.addEventListener('click', openNav);
-xMenu.addEventListener('click', closeNav);
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener("click", function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute("href"));
+        if (target) {
+            window.scrollTo({
+                top: target.offsetTop,
+                behavior: "smooth"
+            });
+        }
+    });
+});
+
+
+
+
+
 
 // Skills Display
 const skill = document.querySelector('.skills');
