@@ -253,6 +253,7 @@ nav li:first-child {
 .contacts {
     display: flex;
     flex-direction: column;
+    margin-bottom: 0;
 }
 
 .contacts-title {
@@ -310,6 +311,38 @@ nav li:first-child {
     border-radius: .5rem;
     text-align: center;
     align-content: center;
+}
+
+/* Socials */
+
+.socials {
+    display: block;
+    width: 100%;
+    height: 50px;
+    margin-top:20px ;
+}
+
+.svg {
+    width: 25px;
+    height: 25px;
+    transition: all 0.2s ;
+    margin: 5px;
+}
+
+.svg:hover {
+    fill: #1F85DE;
+    width: 28px;
+    height: 28px;
+}
+
+.socials ul {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
 }
 
 /* Footer */
@@ -418,10 +451,10 @@ footer {
         left: 40px;
     }
 
-    .svg:hover {
-        fill: #1F85DE;
-        width: 28px;
-        height: 28px;
+    .socials {
+        display: none;
     }
+
+    
 
 }
