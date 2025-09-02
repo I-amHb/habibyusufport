@@ -57,7 +57,8 @@ const frontEnd = [
     { name: 'CSS', filepath: './images/icons/CSS-icon.png' },
     { name: 'JavaScript', filepath: './images/icons/JS-icon.png' },
     { name: 'React', filepath: './images/icons/react-icon.png' },
-    { name: 'Tailwind', filepath: './images/icons/tailwind-icon(1).png' }
+    { name: 'Tailwind', filepath: './images/icons/tailwind-icon(1).png' },
+    { name: 'Sass', filepath: './images/icons/Sass.png' }
 ];
 
 
