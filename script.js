@@ -2,12 +2,12 @@
 const showSideBar = () => {
     const sideBar = document.querySelector('.sidebar');
     sideBar.style.display = 'flex';
-  };
-  
-  const hideSideBar = () => {
-      const sideBar = document.querySelector('.sidebar');
-      sideBar.style.display = 'none';
-  }
+};
+
+const hideSideBar = () => {
+    const sideBar = document.querySelector('.sidebar');
+    sideBar.style.display = 'none';
+}
 const sideBarLinks = document.querySelectorAll('.sidebar-links');
 
 sideBarLinks.forEach(links => {
@@ -25,7 +25,7 @@ window.addEventListener('resize', () => {
 });
 
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener("click", function(e) {
+    anchor.addEventListener("click", function (e) {
         e.preventDefault();
         const target = document.querySelector(this.getAttribute("href"));
         if (target) {
@@ -73,7 +73,7 @@ frontEnd.map((val) => {
 
     let title = document.createElement('p');
     title.textContent = val.name;
-// Nests both p and icon inside  skillHouse
+    // Nests both p and icon inside  skillHouse
     skillHouse.appendChild(icon);
     skillHouse.appendChild(title);
 
@@ -82,9 +82,9 @@ frontEnd.map((val) => {
 })
 
 const backEnd = [
-    {name: 'Node.js', filepath: './images/icons/node-js-icon.png'},
-    {name: 'Express.js', filepath: './images/icons/express-js.png'},
-    {name: 'Python', filepath: './images/icons/python-icon.png'},
+    { name: 'Node.js', filepath: './images/icons/node-js-icon.png' },
+    { name: 'Express.js', filepath: './images/icons/express-js.png' },
+    { name: 'Python', filepath: './images/icons/python-icon.png' },
 ];
 
 
@@ -99,7 +99,7 @@ backEnd.map((val) => {
 
     let title = document.createElement('p');
     title.textContent = val.name;
-// Nests both p and icon inside  skillHouse
+    // Nests both p and icon inside  skillHouse
     skillHouse.appendChild(icon);
     skillHouse.appendChild(title);
 
@@ -109,8 +109,8 @@ backEnd.map((val) => {
 
 
 const ops = [
-    {name: 'Git', filepath: './images/icons/git-icon.png'},
-    {name: 'Vercel', filepath: './images/icons/vercel-icon.png'}
+    { name: 'Git', filepath: './images/icons/git-icon.png' },
+    { name: 'Vercel', filepath: './images/icons/vercel-icon.png' }
 ];
 
 
@@ -126,10 +126,26 @@ ops.map((val) => {
 
     let title = document.createElement('p');
     title.textContent = val.name;
-// Nests both p and icon inside  skillHouse
+    // Nests both p and icon inside  skillHouse
     skillHouse.appendChild(icon);
     skillHouse.appendChild(title);
 
     stackHouse2.appendChild(skillHouse);
     console.log(skillHouse);
 })
+
+
+const projects = [
+    {
+        Title: 'SkyMate',
+        Path: '',
+        Description: '',
+        stacks: ['React', 'Tailwind', 'OpenWeather API']
+    },
+    {
+        Title: 'Ct-converter',
+        Path: '',
+        Description: 'A modern, responsive web application that lets users convert between global currencies in real-time and perform temperature conversions instantly. Built with React.js and Tailwind CSS, the app delivers a clean user experience, API-driven data, and fast interactions',
+        stacks: ['React', 'Tailwind', 'ExchangeRate-API', 'REST Countries API']
+    }
+]
