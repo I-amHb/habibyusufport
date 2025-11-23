@@ -26,7 +26,7 @@ a {
 nav {
     background-color: rgb(9, 27, 48);
     /* box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1); */
-    
+
 }
 
 nav ul {
@@ -40,6 +40,7 @@ nav ul {
 nav li {
     height: 50px;
 }
+
 nav a {
     height: 100%;
     padding: 0 30px;
@@ -220,22 +221,24 @@ nav li:first-child {
 }
 
 .SH {
-    display: flex;
+    /* display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: flex-start;
-    margin: 0 auto;
+    
+    margin: 0 auto; */
+    display: grid;
+    grid-template-columns: repeat(2, 120px);
+    justify-content: space-evenly;
     gap: 1rem;
 
-    /* border: 1px  solid blue; */
+    /* border: 1px solid blue; */
     padding: 10px;
 }
 
 .divCont {
-    min-width: 120px;
-    max-width: 150px;
     height: auto;
-    /* border: 1px  solid rgb(0, 255, 34); */
+    /* border: 1px solid rgb(0, 255, 34); */
     padding: 10px;
     display: flex;
     flex-direction: column;
@@ -243,6 +246,7 @@ nav li:first-child {
     justify-items: center;
     align-items: center;
     flex-wrap: nowrap;
+
 }
 
 .icon {
@@ -323,13 +327,13 @@ nav li:first-child {
     display: block;
     width: 100%;
     height: 50px;
-    margin-top:20px ;
+    margin-top: 20px;
 }
 
 .svg {
     width: 25px;
     height: 25px;
-    transition: all 0.2s ;
+    transition: all 0.2s;
     margin: 5px;
 }
 
@@ -388,6 +392,10 @@ footer {
 
         min-width: 500px;
     }
+
+    .SH {
+        grid-template-columns: repeat(3, 120px);
+    }
 }
 
 
@@ -404,12 +412,13 @@ footer {
     .menu-button {
         display: none;
     }
+
     .sec {
         padding: 0 60px;
     }
 
     .hero-p {
-        line-height: 35px;   
+        line-height: 35px;
     }
 
     .about {
@@ -420,6 +429,10 @@ footer {
     .about-p {
         min-width: 630px;
         line-height: 35px;
+    }
+
+    .SH {
+        grid-template-columns: repeat(5, 120px);
     }
 
     .main-container {
@@ -460,6 +473,6 @@ footer {
         display: none;
     }
 
-    
+
 
 }
