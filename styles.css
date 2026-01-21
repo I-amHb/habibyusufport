@@ -185,6 +185,30 @@ nav li:first-child {
     text-align: center;
     align-content: center;
 }
+/* hero section scroll transition */
+.hr p{
+    translate: -100%;
+    opacity: 0;
+    transition: 400ms ease;
+    
+}
+.hr h1{
+    scale: 100%;
+    opacity: 0;
+    transition: 600ms ease;
+    
+}
+.hr h2{
+    translate: -100%;
+    opacity: 0;
+    transition: 800ms ease;
+    
+}
+
+.hr.show p, .hr.show h1, .hr.show h2 {
+    translate: 0;
+    opacity: 1;   
+}
 
 /* About section */
 

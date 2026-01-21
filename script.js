@@ -38,7 +38,22 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 
+// Intersection Observer Section for scroll animation
+const hrObserver = document.querySelector('.hr');
+const observer = new IntersectionObserver((entries) => {
+    if (entries[0].isIntersecting) {
+        entries[0].target.classList.add('show');
+    } else {
+        entries[0].target.classList.remove('show');
 
+    }
+
+    console.log(entries)
+
+}, {
+    threshold: 1,
+});
+observer.observe(hrObserver);
 
 
 
@@ -78,7 +93,7 @@ frontEnd.map((val) => {
     skillHouse.appendChild(title);
 
     stackHouse.appendChild(skillHouse);
-    console.log(skillHouse);
+    // console.log(skillHouse);
 })
 
 const backEnd = [
@@ -104,7 +119,7 @@ backEnd.map((val) => {
     skillHouse.appendChild(title);
 
     stackHouse1.appendChild(skillHouse);
-    console.log(skillHouse);
+    // console.log(skillHouse);
 })
 
 
@@ -131,7 +146,7 @@ ops.map((val) => {
     skillHouse.appendChild(title);
 
     stackHouse2.appendChild(skillHouse);
-    console.log(skillHouse);
+    // console.log(skillHouse);
 })
 
 
