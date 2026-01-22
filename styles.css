@@ -185,29 +185,50 @@ nav li:first-child {
     text-align: center;
     align-content: center;
 }
+
 /* hero section scroll transition */
-.hr p{
-    translate: -100%;
+.hr p {
+    translate: 0 200%;
     opacity: 0;
     transition: 400ms ease;
-    
-}
-.hr h1{
-    scale: 100%;
-    opacity: 0;
-    transition: 600ms ease;
-    
-}
-.hr h2{
-    translate: -100%;
-    opacity: 0;
-    transition: 800ms ease;
-    
+
 }
 
-.hr.show p, .hr.show h1, .hr.show h2 {
-    translate: 0;
-    opacity: 1;   
+.hr h1 {
+    translate: 0 200%;
+    opacity: 0;
+    transition: 500ms ease;
+
+}
+
+.hr h2 {
+    translate: 0 200%;
+    opacity: 0;
+    transition: 600ms ease;
+
+}
+
+.hr .main{
+    translate: 0 200%;
+    opacity: 0;
+    transition: 800ms ease;
+
+}
+
+.hr a{
+    translate: 0 200%;
+    opacity: 0;
+    transition: 1000ms ease;
+
+}
+
+.hr.show p, 
+.hr.show h1, 
+.hr.show h2,
+.hr.show .main,
+.hr.show a {
+    translate:0 0;
+    opacity: 1;
 }
 
 /* About section */
@@ -363,8 +384,7 @@ nav li:first-child {
 
 .svg:hover {
     fill: #1F85DE;
-    width: 28px;
-    height: 28px;
+    scale: 110%;
 }
 
 .socials ul {

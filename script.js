@@ -39,21 +39,21 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 
 // Intersection Observer Section for scroll animation
-const hrObserver = document.querySelector('.hr');
+const heroObserver = document.querySelectorAll('.hr');
 const observer = new IntersectionObserver((entries) => {
-    if (entries[0].isIntersecting) {
-        entries[0].target.classList.add('show');
-    } else {
-        entries[0].target.classList.remove('show');
-
+    entries.forEach((entry=>{
+        if (entry.isIntersecting) {
+        entry.target.classList.add('show');
     }
+    }))
+     
 
     console.log(entries)
 
 }, {
     threshold: 1,
 });
-observer.observe(hrObserver);
+heroObserver.forEach(val => observer.observe(val));
 
 
 
