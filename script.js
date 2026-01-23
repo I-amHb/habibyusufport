@@ -41,12 +41,12 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 // Intersection Observer Section for scroll animation
 const heroObserver = document.querySelectorAll('.hr');
 const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry=>{
+    entries.forEach((entry => {
         if (entry.isIntersecting) {
-        entry.target.classList.add('show');
-    }
+            entry.target.classList.add('show');
+        }
     }))
-     
+
 
     console.log(entries)
 
@@ -152,15 +152,48 @@ ops.map((val) => {
 
 const projects = [
     {
-        Title: 'SkyMate',
-        Path: '',
-        Description: '',
+        Title: 'Weather App',
+        Path: '/images/skymate-bg.jpeg',
+        Description: 'A clean and responsive weather application that allows users to search for cities and view real-time weather conditions. Built with React.js and Tailwind CSS, SkyMate integrates the OpenWeather API to deliver accurate forecasts, temperature data, and a smooth, user-friendly experience.',
         stacks: ['React', 'Tailwind', 'OpenWeather API']
     },
     {
         Title: 'Ct-converter',
-        Path: '',
-        Description: 'A modern, responsive web application that lets users convert between global currencies in real-time and perform temperature conversions instantly. Built with React.js and Tailwind CSS, the app delivers a clean user experience, API-driven data, and fast interactions',
+        Path: '/images/ct-screenshot.png',
+        Description: 'A modern, responsive web application that lets users convert between global currencies in real-time and perform temperature conversions instantly. Built with React.js and Tailwind CSS, the app delivers a clean user experience, API-driven data, and fast interactions.',
         stacks: ['React', 'Tailwind', 'ExchangeRate-API', 'REST Countries API']
+    },
+    {
+        Title: 'Portfolio Site',
+        Path: '/images/portfolio.png',
+        Description: 'A personal portfolio website designed to showcase projects, skills, and experience as a frontend developer. Built with HTML, CSS, and JavaScript, the site features a clean layout, responsive design, smooth interactions, and a strong focus on usability and performance.',
+        stacks: ['HTML', 'CSS', 'JavaScript']
+    },
+    {
+        Title: 'TaskMaster (Backend)',
+        Path: '/images/TaskMaster-server.png',
+        Description: 'A scalable and secure task management backend system that supports user authentication and full CRUD operations for managing tasks. Built with Node.js and Express.js, TaskMaster uses RESTful APIs, JWT-based authentication, and database integration to handle tasks with priorities, deadlines, and user-specific data.',
+        stacks: ['Node.js', 'Express.js', 'MongoDB', 'JWT', 'bcrypt']
     }
 ]
+
+const projectContainer = document.querySelector('.projects-container');
+
+projects.forEach((project) => {
+
+    const cards = document.createElement('div');
+    cards.className = 'project-Card';
+
+    cards.innerHTML = `
+        <div class="projceImg-container">
+            <div><img src="${project.Path}" alt="${project.Title} image"></div>
+        </div>
+        <div>
+            <h3 class="proj-title">${project.Title}</h3>
+            <p class="proj-descr">${project.Description}</p>
+        </div>
+    `
+    projectContainer.appendChild(cards);
+
+
+})

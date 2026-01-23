@@ -52,7 +52,6 @@ nav a {
     display: flex;
 }
 
-
 nav a:hover {
     border-bottom: 2px solid #1F85DE;
 }
@@ -149,8 +148,18 @@ nav li:first-child {
 }
 
 /* Hero section */
+
+.intro-img {
+    display: grid;
+
+    @media (width >= 1024px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+}
+
 .hero {
-    height: 80vh;
+    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -174,6 +183,23 @@ nav li:first-child {
     max-width: 552px;
 }
 
+.image-container {
+    margin-top: 3rem;
+    display: grid;
+    justify-content: center;
+
+
+}
+
+.HB {
+    width: 180px;
+}
+
+.HB img {
+    border-radius: 50%;
+    width: 100%;
+    background-color: #e3e4e4;
+}
 
 .heroCTA {
     display: inline-block;
@@ -184,6 +210,12 @@ nav li:first-child {
     border-radius: .5rem;
     text-align: center;
     align-content: center;
+
+    transition: 100ms ;
+}
+
+.heroCTA:hover {
+    background-color: rgba(16, 69, 122, 0.862);
 }
 
 /* hero section scroll transition */
@@ -209,7 +241,7 @@ nav li:first-child {
 }
 
 .hr .main{
-    translate: 0 200%;
+    translate: 0 100%;
     opacity: 0;
     transition: 800ms ease;
 
@@ -227,7 +259,19 @@ nav li:first-child {
 .hr.show h2,
 .hr.show .main,
 .hr.show a {
-    translate:0 0;
+    translate: 0;
+    opacity: 1;
+}
+
+.hr .HB {
+    translate: 100%;
+    opacity: 0;
+
+    transition: 800ms ease;
+}
+
+.hr.show .HB {
+    translate: 0;
     opacity: 1;
 }
 
@@ -300,6 +344,8 @@ nav li:first-child {
 }
 
 /* Project section */
+
+
 
 /* Contact section */
 
