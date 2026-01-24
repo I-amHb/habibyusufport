@@ -191,6 +191,10 @@ projects.forEach((project) => {
         <div>
             <h3 class="proj-title">${project.Title}</h3>
             <p class="proj-descr">${project.Description}</p>
+            <ul>${project.stacks
+                .map(stack => `<li>${stack}</li>`)
+                .join('')}
+            </ul>
         </div>
     `
     projectContainer.appendChild(cards);
