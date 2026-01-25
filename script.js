@@ -38,22 +38,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 
-// Intersection Observer Section for scroll animation
-const heroObserver = document.querySelectorAll('.hr');
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('show');
-        }
-    }))
-
-
-    console.log(entries)
-
-}, {
-    threshold: 1,
-});
-heroObserver.forEach(val => observer.observe(val));
 
 
 
@@ -158,7 +142,7 @@ const projects = [
         stacks: ['React', 'Tailwind', 'OpenWeather API']
     },
     {
-        Title: 'Ct-converter',
+        Title: 'Ct-Converter',
         Path: '/images/ct-screenshot.png',
         Description: 'A modern, responsive web application that lets users convert between global currencies in real-time and perform temperature conversions instantly. Built with React.js and Tailwind CSS, the app delivers a clean user experience, API-driven data, and fast interactions.',
         stacks: ['React', 'Tailwind', 'ExchangeRate-API', 'REST Countries API']
@@ -182,22 +166,43 @@ const projectContainer = document.querySelector('.projects-container');
 projects.forEach((project) => {
 
     const cards = document.createElement('div');
-    cards.className = 'project-Card';
+    cards.className = 'project-card';
 
     cards.innerHTML = `
-        <div class="projceImg-container">
-            <div><img src="${project.Path}" alt="${project.Title} image"></div>
+    <div class='card pj'>
+        <div class="projImg-container">
+            <div class='imgDiv'><img src="${project.Path}" alt="${project.Title} image"></div>
         </div>
-        <div>
-            <h3 class="proj-title">${project.Title}</h3>
+        <div class='projDetails'>
+            <h2 class="proj-title">${project.Title}</h2>
             <p class="proj-descr">${project.Description}</p>
-            <ul>${project.stacks
+            <ul class='stackUl'>${project.stacks
                 .map(stack => `<li>${stack}</li>`)
                 .join('')}
             </ul>
         </div>
+    </div>
+        
     `
     projectContainer.appendChild(cards);
 
 
 })
+
+// Intersection Observer Section for scroll animation
+
+const heroObserver = document.querySelectorAll('.hr');
+const projObserver = document.querySelectorAll('.pj');
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+        }
+    }))
+    // console.log(entries);
+}, {
+    threshold: 1,
+});
+heroObserver.forEach(val => observer.observe(val));
+projObserver.forEach(val => observer.observe(val));

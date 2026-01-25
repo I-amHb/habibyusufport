@@ -152,10 +152,10 @@ nav li:first-child {
 .intro-img {
     display: grid;
 
-    @media (width >= 1024px) {
+    @media (width >=1024px) {
         grid-template-columns: repeat(2, 1fr);
     }
-    
+
 }
 
 .hero {
@@ -211,7 +211,7 @@ nav li:first-child {
     text-align: center;
     align-content: center;
 
-    transition: 100ms ;
+    transition: 100ms;
 }
 
 .heroCTA:hover {
@@ -240,22 +240,22 @@ nav li:first-child {
 
 }
 
-.hr .main{
+.hr .main {
     translate: 0 100%;
     opacity: 0;
     transition: 800ms ease;
 
 }
 
-.hr a{
+.hr a {
     translate: 0 200%;
     opacity: 0;
     transition: 1000ms ease;
 
 }
 
-.hr.show p, 
-.hr.show h1, 
+.hr.show p,
+.hr.show h1,
 .hr.show h2,
 .hr.show .main,
 .hr.show a {
@@ -345,6 +345,111 @@ nav li:first-child {
 
 /* Project section */
 
+.projects {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5rem;
+    height: auto;
+}
+
+.project-card {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+    /* border: 2px solid white; */
+}
+
+.card {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1rem;
+
+    @media (width >=767px) {
+        grid-template-columns: minmax(400px, 620px)  clamp(400px, 450px, 500px);
+    }
+}
+
+.imgDiv {
+    background-color: black;
+    width: 100%;
+    height: 300px;
+    border-radius: 7px;
+    overflow: hidden;
+    opacity: 0.5;
+
+    transition: 200ms ease-in;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+
+
+    @media (width >=767px) {
+        width: clamp();
+        height: 300px;
+    }
+}
+
+.imgDiv:hover {
+    opacity: 1;
+}
+
+.projDetails {
+    display: grid;
+    row-gap: 1rem;
+    padding: 1rem 0;
+
+    p {
+        padding: 10px;
+    }
+
+    @media (width >=767px) {
+        padding: 0;
+    }
+
+}
+
+
+
+.stackUl {
+    list-style-type: none;
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+    li {
+        /* border: 1px solid white; */
+        border-radius: 4px;
+        padding: 5px;
+        background-color: rgb(3, 10, 18);
+        font-size: small;
+
+    }
+}
+
+/* project section scroll tarnsitions */
+
+.pj .projImg-container {
+    translate: -100%;
+    opacity: 0;
+    transition: 800ms ease-in-out;
+}
+
+.pj .projDetails {
+    translate: 0 100%;
+    transition: 600ms ease;
+}
+
+.pj.show .projImg-container,
+.pj.show .projDetails {
+    translate: 0;
+    opacity: 1;
+}
 
 
 /* Contact section */
@@ -480,7 +585,7 @@ footer {
     .about-title,
     .about-p {
 
-        min-width: 500px;
+        max-width: 500px;
     }
 
     .SH {
