@@ -220,35 +220,35 @@ nav li:first-child {
 
 /* hero section scroll transition */
 .hr p {
-    translate: 0 200%;
+    transform: translate(0, 200%);
     opacity: 0;
     transition: 400ms ease;
 
 }
 
 .hr h1 {
-    translate: 0 200%;
+    transform: translate(0, 200%);
     opacity: 0;
     transition: 500ms ease;
 
 }
 
 .hr h2 {
-    translate: 0 200%;
+    transform: translate(0, 200%);
     opacity: 0;
     transition: 600ms ease;
 
 }
 
 .hr .main {
-    translate: 0 100%;
+    transform: translate(0, 100%);
     opacity: 0;
     transition: 800ms ease;
 
 }
 
 .hr a {
-    translate: 0 200%;
+    transform: translate(0, 200%);
     opacity: 0;
     transition: 1000ms ease;
 
@@ -259,19 +259,19 @@ nav li:first-child {
 .hr.show h2,
 .hr.show .main,
 .hr.show a {
-    translate: 0;
+    transform: translate(0);
     opacity: 1;
 }
 
 .hr .HB {
-    translate: 100%;
+    transform: translate(100%);
     opacity: 0;
 
     transition: 800ms ease;
 }
 
 .hr.show .HB {
-    translate: 0;
+    transform: translate(0);
     opacity: 1;
 }
 
@@ -356,7 +356,7 @@ nav li:first-child {
 .project-card {
     display: flex;
     flex-direction: column;
-    margin: 20px 0;
+    margin: 40px 0;
     /* border: 2px solid white; */
 }
 
@@ -366,7 +366,7 @@ nav li:first-child {
     gap: 1rem;
 
     @media (width >=767px) {
-        grid-template-columns: minmax(400px, 620px)  clamp(400px, 450px, 500px);
+        grid-template-columns: minmax(400px, 620px) clamp(400px, 450px, 500px);
     }
 }
 
@@ -435,19 +435,19 @@ nav li:first-child {
 /* project section scroll tarnsitions */
 
 .pj .projImg-container {
-    translate: -100%;
+    transform: translate(-50%);
     opacity: 0;
-    transition: 800ms ease-in-out;
+    transition: 500ms ease-in-out;
 }
 
 .pj .projDetails {
-    translate: 0 100%;
-    transition: 600ms ease;
+    transform: translate(0, 50%);
+    transition: 500ms ease;
 }
 
 .pj.show .projImg-container,
 .pj.show .projDetails {
-    translate: 0;
+    transform: translate(0);
     opacity: 1;
 }
 

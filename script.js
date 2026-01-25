@@ -177,8 +177,8 @@ projects.forEach((project) => {
             <h2 class="proj-title">${project.Title}</h2>
             <p class="proj-descr">${project.Description}</p>
             <ul class='stackUl'>${project.stacks
-                .map(stack => `<li>${stack}</li>`)
-                .join('')}
+            .map(stack => `<li>${stack}</li>`)
+            .join('')}
             </ul>
         </div>
     </div>
@@ -198,11 +198,12 @@ const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry => {
         if (entry.isIntersecting) {
             entry.target.classList.add('show');
+            observer.unobserve(entry.target);
         }
     }))
     // console.log(entries);
 }, {
-    threshold: 1,
+    threshold: 0.4,
 });
 heroObserver.forEach(val => observer.observe(val));
 projObserver.forEach(val => observer.observe(val));
