@@ -192,6 +192,8 @@ projects.forEach((project) => {
 // Intersection Observer Section for scroll animation
 
 const heroObserver = document.querySelectorAll('.hr');
+const aboutObserver = document.querySelectorAll('.ab');
+const skillObserver = document.querySelectorAll('.sk');
 const projObserver = document.querySelectorAll('.pj');
 
 const observer = new IntersectionObserver((entries) => {
@@ -203,7 +205,20 @@ const observer = new IntersectionObserver((entries) => {
     }))
     // console.log(entries);
 }, {
-    threshold: 0.4,
+    threshold: 0.2,
 });
 heroObserver.forEach(val => observer.observe(val));
-projObserver.forEach(val => observer.observe(val));
+aboutObserver.forEach(val => observer.observe(val));
+skillObserver.forEach(val => observer.observe(val));
+projObserver.forEach((card, index) => {
+    const delay = index * 120;
+
+    const img = card.querySelector('.projImg-container');
+    const details = card.querySelector('.projDetails');
+
+    if (img) img.style.transitionDelay = `${delay}ms`;
+    if (details) details.style.transitionDelay = `${delay + 120}ms`;
+
+    observer.observe(card);
+});
+

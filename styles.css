@@ -133,7 +133,7 @@ nav li:first-child {
 
 .sec {
     width: 100%;
-    min-height: 500px;
+    height: auto;
     /* border: 1px solid red; */
     padding: 20px 15px;
     margin: 30px 0;
@@ -219,6 +219,18 @@ nav li:first-child {
 }
 
 /* hero section scroll transition */
+
+
+.hr p,
+.hr h1,
+.hr h2,
+.hr .main,
+.hr a,
+.hr .HB {
+    will-change: transform, opacity;
+}
+
+
 .hr p {
     transform: translate(0, 200%);
     opacity: 0;
@@ -279,6 +291,7 @@ nav li:first-child {
 
 .about {
     max-width: 100%;
+    height: auto;
     display: flex;
     flex-direction: column;
     /* border: 1px solid red; */
@@ -288,9 +301,37 @@ nav li:first-child {
 
 .about-title,
 .about-p {
+
     max-width: 552px;
 }
 
+/* about section scroll transition   */
+
+.ab h2,
+.ab p {
+    will-change: transform, opacity;
+}
+
+
+.ab h2 {
+    transform: translate(0, 150%);
+    opacity: 0;
+
+    transition: 600ms ease;
+}
+
+.ab p {
+    transform: translate(0, 80%);
+    opacity: 0;
+
+    transition: 900ms ease;
+}
+
+.ab.show h2,
+.ab.show p {
+    transform: translate(0);
+    opacity: 1;
+} 
 
 
 /* Skills section */
@@ -343,6 +384,35 @@ nav li:first-child {
     max-width: 40px;
 }
 
+/* about section scroll transition   */
+
+.sk h2,
+.sk div {
+    will-change: transform, opacity;
+}
+
+.sk h2 {
+    transform: translate(0, 150%);
+    opacity: 0;
+
+    transition: 600ms ease-in;
+}
+
+.sk div {
+    transform: translate(0, 150%);
+    opacity: 0;
+
+    transition: 2s ease-in-out;
+
+}
+
+.sk.show h2,
+.sk.show div {
+    transform: translate(0);
+    opacity: 1;
+} 
+
+
 /* Project section */
 
 .projects {
@@ -389,7 +459,6 @@ nav li:first-child {
 
 
     @media (width >=767px) {
-        width: clamp();
         height: 300px;
     }
 }
@@ -433,6 +502,12 @@ nav li:first-child {
 }
 
 /* project section scroll tarnsitions */
+
+.pj .projImg-container,
+.pj .projDetails {
+    will-change: transform, opacity;
+}
+
 
 .pj .projImg-container {
     transform: translate(-50%);
