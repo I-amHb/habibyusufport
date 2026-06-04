@@ -136,28 +136,39 @@ ops.map((val) => {
 
 const projects = [
     {
-        Title: 'Weather App',
-        Path: '/images/skymate-bg.jpeg',
-        Description: 'A clean and responsive weather application that allows users to search for cities and view real-time weather conditions. Built with React.js and Tailwind CSS, SkyMate integrates the OpenWeather API to deliver accurate forecasts, temperature data, and a smooth, user-friendly experience.',
-        stacks: ['React', 'Tailwind', 'OpenWeather API']
-    },
-    {
-        Title: 'Ct-Converter',
-        Path: '/images/ct-screenshot.png',
-        Description: 'A modern, responsive web application that lets users convert between global currencies in real-time and perform temperature conversions instantly. Built with React.js and Tailwind CSS, the app delivers a clean user experience, API-driven data, and fast interactions.',
-        stacks: ['React', 'Tailwind', 'ExchangeRate-API', 'REST Countries API']
-    },
-    {
-        Title: 'Portfolio Site',
-        Path: '/images/portfolio.png',
-        Description: 'A personal portfolio website designed to showcase projects, skills, and experience as a frontend developer. Built with HTML, CSS, and JavaScript, the site features a clean layout, responsive design, smooth interactions, and a strong focus on usability and performance.',
-        stacks: ['HTML', 'CSS', 'JavaScript']
+        Title: 'StockTracker',
+        Path: '/images/stocktracker.png',
+        Description: 'An inventory management dashboard that tracks product stock levels, calculates total stock value and revenue, allows sales checkout with real-time stock updates, and notifies users when inventory falls below a predefined threshold.',
+        stacks: ['React', 'Tailwind'],
+        demo: 'https://stock-tracker-alpha-lilac.vercel.app/'
     },
     {
         Title: 'TaskMaster (Backend)',
         Path: '/images/TaskMaster-server.png',
         Description: 'A scalable and secure task management backend system that supports user authentication and full CRUD operations for managing tasks. Built with Node.js and Express.js, TaskMaster uses RESTful APIs, JWT-based authentication, and database integration to handle tasks with priorities, deadlines, and user-specific data.',
-        stacks: ['Node.js', 'Express.js', 'MongoDB', 'JWT', 'bcrypt']
+        stacks: ['Node.js', 'Express.js', 'MongoDB', 'JWT', 'bcrypt'],
+        demo: 'https://github.com/I-amHb/TaskMaster'
+    },
+    {
+        Title: 'Figma Conversion(Positivus)',
+        Path: '/images/Positivus.png',
+        Description: 'This is project is conversion of a Figma design to a webpage using React',
+        stacks: ['React', 'Tailwind'],
+        demo: 'https://positivus-figma.vercel.app/'
+    },
+    {
+        Title: 'Ct-Converter',
+        Path: '/images/ct-screenshot.png',
+        Description: 'A modern, responsive web application that lets users convert between global currencies in real-time and perform temperature conversions instantly. Built with React.js and Tailwind CSS, the app delivers a clean user experience, API-driven data, and fast interactions.',
+        stacks: ['React', 'Tailwind', 'ExchangeRate-API', 'REST Countries API'],
+        demo: 'https://ct-converter.vercel.app/'
+    },
+    {
+        Title: 'Portfolio Site',
+        Path: '/images/portfolio.png',
+        Description: 'A personal portfolio website designed to showcase projects, skills, and experience as a frontend developer. Built with HTML, CSS, and JavaScript, the site features a clean layout, responsive design, smooth interactions, and a strong focus on usability and performance.',
+        stacks: ['HTML', 'CSS', 'JavaScript'],
+        demo: 'https://habibyusufport.vercel.app/'
     }
 ]
 
@@ -179,7 +190,9 @@ projects.forEach((project) => {
             <ul class='stackUl'>${project.stacks
             .map(stack => `<li>${stack}</li>`)
             .join('')}
+            <a class='proj-btn' href='${project.demo}' target="_blank" >Demo →</a>
             </ul>
+            
         </div>
     </div>
         

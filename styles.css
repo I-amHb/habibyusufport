@@ -468,10 +468,12 @@ nav li:first-child {
 }
 
 .projDetails {
-    display: grid;
+    /* display: grid;
     row-gap: 1rem;
-    padding: 1rem 0;
-
+    padding: 1rem 0; */
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
     p {
         padding: 10px;
     }
@@ -482,6 +484,26 @@ nav li:first-child {
 
 }
 
+.proj-btn {
+    display: inline-block;
+    border: 1px solid #1F85DE;
+    align-self: flex-start;
+    color: #1F85DE;
+    border-radius: 4px;
+    padding: 5px;
+    text-align: center;
+    font-size: small;
+    font-weight: 600;
+    align-content: center;
+    background-color: rgb(3, 10, 18);
+    transition-duration: 100ms;
+    transition: 200ms;
+}
+
+.proj-btn:hover {
+    background-color: rgba(16, 69, 122, 0.862);
+}
+
 
 
 .stackUl {
@@ -489,7 +511,8 @@ nav li:first-child {
     display: flex;
     gap: 8px;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: flex-start;
+    align-content: flex-start;
 
     li {
         /* border: 1px solid white; */
