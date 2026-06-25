@@ -23,9 +23,16 @@ a {
 }
 
 /* Navbar */
+
+
 nav {
     background-color: rgb(9, 27, 48);
     /* box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1); */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10000;
+    transition: top 0.3s;
 
 }
 
@@ -487,7 +494,6 @@ nav li:first-child {
 .proj-btn {
     display: inline-block;
     border: 1px solid #1F85DE;
-    align-self: flex-start;
     color: #1F85DE;
     border-radius: 4px;
     padding: 5px;
@@ -495,9 +501,11 @@ nav li:first-child {
     font-size: small;
     font-weight: 600;
     align-content: center;
+    align-self: flex-end;
     background-color: rgb(3, 10, 18);
     transition-duration: 100ms;
     transition: 200ms;
+    
 }
 
 .proj-btn:hover {
@@ -731,6 +739,7 @@ footer {
     .main-container {
         display: flex;
         position: relative;
+        margin-top: 50px;
     }
 
     .middle {
