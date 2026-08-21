@@ -53,6 +53,8 @@ nav a {
     padding: 0 30px;
     display: none;
     align-items: center;
+    transition-duration: 0.3s;
+    transition-delay: 0.1s;
 }
 
 .logo {
@@ -60,11 +62,11 @@ nav a {
 }
 
 nav a:hover {
-    border-bottom: 2px solid #1F85DE;
+    color: #1F85DE;
 }
 
 .logo:hover {
-    border-bottom: none;
+    color: inherit;
 }
 
 nav li:first-child {
@@ -402,7 +404,7 @@ nav li:first-child {
     transform: translate(0, 150%);
     opacity: 0;
 
-    transition: 600ms ease-in;
+    transition: 400ms ease-in;
 }
 
 .sk div {
@@ -410,6 +412,7 @@ nav li:first-child {
     opacity: 0;
 
     transition: 2s ease-in-out;
+    transition-duration: 1s;
 
 }
 
